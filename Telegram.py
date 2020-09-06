@@ -37,6 +37,7 @@ def Help():
      print(gr+"[2] second Step set Your with This Applictin like Give your API IS, Hash Id, And your No and you can reset any time  ")
      print(gr+"[3] Scrap data From any Group using Menu C button and it's work when your Setup Process already complated  ")
      print(gr+"[4]  ")
+     menu()
   
   
   
@@ -45,7 +46,9 @@ def installapp():
      print(gr+"[+] Installing requierments ...")
      os.system('python -m pip install telethon')
      os.system('pip install telethon')
+     os.system('clear')	
      print(gr+"[+] installation  Complate  !")
+     menu()
       
 def setupForScrape():
    setup_banner()
@@ -56,8 +59,9 @@ def setupForScrape():
    setup = open('configScrap.data', 'w')
    cpass.write(setup)
    setup.close()
+   os.system('clear')	       
    print(gr+"[+] Acount setup complete !")
-    
+   menu()	
     
 def acceptdata():
     xid = input(gr+"[+] enter api ID : "+re)
@@ -66,6 +70,7 @@ def acceptdata():
     cpass.set('cred', 'hash', xhash)
     xphone = input(gr+"[+] enter phone number : "+re)
     cpass.set('cred', 'phone', xphone)   
+	
 def setupForAddData():
     setup_banner()
     os.system("touch configAddData.data")
@@ -75,8 +80,10 @@ def setupForAddData():
     setup = open('configAddData.data', 'w')
     cpass.write(setup)
     setup.close()
+    os.system('clear')
     print(gr+"[+] Acount setup complete !")
-                          
+    menu()
+             
                  
         
 def scraper ():
@@ -159,11 +166,13 @@ def scraper ():
         else:
             last_name= ""
         name= (first_name + ' ' + last_name).strip()
-        writer.writerow([username,user.id,user.access_hash,name,target_group.title, target_group.id])      
+        writer.writerow([username,user.id,user.access_hash,name,target_group.title, target_group.id])  
+ os.system('clear')	
  print(gr+'[+] Members scraped successfully.  ')
  print(gr+'[+] Wait 5 second....  menu is Opening ')
+ menu()
   
-def AddMemberInGroup():
+def AddMemberInGroup():	
  Name_banner()
  cpass = configparser.RawConfigParser()
  cpass.read('configAddData.data')
@@ -266,7 +275,8 @@ def AddMemberInGroup():
         traceback.print_exc()
         print("Unexpected Error")
         continue
-
+	
+ menu()
 def menu():
     print("Main Menu Select any one ")
     time.sleep(1)
