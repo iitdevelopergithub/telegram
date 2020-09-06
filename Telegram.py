@@ -297,7 +297,7 @@ def menu():
     elif choice==7:
          sys.exit
     else:
-        print("You must only select either 1,2,3,4,5,6")
+        print("You must only select either 1,2,3,4,5,6,7")
         print("Please try again")
         menu()
  
