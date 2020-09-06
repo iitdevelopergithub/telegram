@@ -270,7 +270,7 @@ def AddMemberInGroup():
 def main():
      menu()   
 main()
- def menu():
+def menu():
     print("Main Menu Select any one ")
     time.sleep(1)
     print()
