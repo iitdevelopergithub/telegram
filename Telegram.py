@@ -74,13 +74,18 @@ def setupForAddData():
     os.system("touch configAddData.data")
     cpass = configparser.RawConfigParser()
     cpass.add_section('cred')
-    acceptdata()
-    setup = open('configAddData.data', 'w')
-    cpass.write(setup)
-    setup.close()
-    os.system('clear')
-    print(gr+"[+] Acount setup complete !")
-    menu()
+    xid = input(gr+"[+] enter api ID : "+re)
+   cpass.set('cred', 'id', xid)
+   xhash = input(gr+"[+] enter hash ID : "+re)
+   cpass.set('cred', 'hash', xhash)
+   xphone = input(gr+"[+] enter phone number : "+re)
+   cpass.set('cred', 'phone', xphone)
+   setup = open('onfigScrap.data', 'w')
+   cpass.write(setup)
+   setup.close()
+   print(gr+"[+] setup complete !")
+	
+   menu()	
              
                  
         
