@@ -103,7 +103,7 @@ def scraper ():
     client = TelegramClient(phone, api_id, api_hash)
  except KeyError:
     os.system('clear')
-    banner.Name_banner
+    Name_banner
     print(re+"[!] Go to menu and install application  !!\n")
     sys.exit(1)
 
