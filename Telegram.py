@@ -296,7 +296,7 @@ def menu():
          AddMemberInGroup()
     elif choice == 6:
          Help() 
-    elif choice==7":
+    elif choice==7:
          sys.exit
     else:
         print("You must only select either 1,2,3,4,5,6")
