@@ -52,15 +52,20 @@ def installapp():
       
 def setupForScrape():
    setup_banner()
-   os.system("touch configScrap.data")
+   os.system("touch config.data")
    cpass = configparser.RawConfigParser()
    cpass.add_section('cred')
-   acceptdata()
-   setup = open('configScrap.data', 'w')
+   xid = input(gr+"[+] enter api ID : "+re)
+   cpass.set('cred', 'id', xid)
+   xhash = input(gr+"[+] enter hash ID : "+re)
+   cpass.set('cred', 'hash', xhash)
+   xphone = input(gr+"[+] enter phone number : "+re)
+   cpass.set('cred', 'phone', xphone)
+   setup = open('config.data', 'w')
    cpass.write(setup)
    setup.close()
-   os.system('clear')	       
-   print(gr+"[+] Acount setup complete !")
+   print(gr+"[+] setup complete !")
+	
    menu()	
     
 def acceptdata():
