@@ -25,7 +25,7 @@ def Name_banner():
         version : 2.0
         {re} Created By {cy} IIT DEVELOPER {gr}Team 
         """)
-  def setup_banner():
+def setup_banner():
       Name_banner()
       print(f"""
 	    {re}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
@@ -40,7 +40,7 @@ def Help():
   
   
   
-  def installapp():
+def installapp():
      setup_banner()
      print(gr+"[+] Installing requierments ...")
      os.system('python -m pip install telethon')
@@ -59,7 +59,7 @@ def setupForScrape():
    print(gr+"[+] Acount setup complete !")
     
     
- def acceptdata():
+def acceptdata():
     xid = input(gr+"[+] enter api ID : "+re)
     cpass.set('cred', 'id', xid)
     xhash = input(gr+"[+] enter hash ID : "+re)
@@ -266,7 +266,7 @@ def AddMemberInGroup():
         traceback.print_exc()
         print("Unexpected Error")
         continue
-main():
+main()
      menu()
     
  def menu():
@@ -274,13 +274,13 @@ main():
     time.sleep(1)
     print()
     choice = input("""
-    A: Install Application 
-    B: Setup Your Acount for scrapping Data
-    C: Scrape Data From Group
-    D: Setup Acount for Add Data in Group
-    E: Add Member Into Group 
-    H: How to Work this  
-    Q: Quit/Log Out
+    1: Install Application 
+    2: Setup Your Acount for scrapping Data
+    3: Scrape Data From Group
+    4: Setup Acount for Add Data in Group
+    5: Add Member Into Group 
+    6: How to Work this  
+    7: Quit/Log Out
     
     Please enter your choice: """)                  
     if choice == 1:
@@ -298,7 +298,7 @@ main():
     elif choice==7":
          sys.exit
     else:
-        print("You must only select either A,B,C, or D.")
+        print("You must only select either 1,2,3,4,5,6")
         print("Please try again")
         menu()
  
