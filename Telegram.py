@@ -70,11 +70,11 @@ def setupForScrape():
       
 	
 def setupForAddData():
-    setup_banner()
-    os.system("touch configAddData.data")
-    cpass = configparser.RawConfigParser()
-    cpass.add_section('cred')
-    xid = input(gr+"[+] enter api ID : "+re)
+   setup_banner()
+   os.system("touch configAddData.data")
+   cpass = configparser.RawConfigParser()
+   cpass.add_section('cred')
+   xid = input(gr+"[+] enter api ID : "+re)
    cpass.set('cred', 'id', xid)
    xhash = input(gr+"[+] enter hash ID : "+re)
    cpass.set('cred', 'hash', xhash)
@@ -84,7 +84,6 @@ def setupForAddData():
    cpass.write(setup)
    setup.close()
    print(gr+"[+] setup complete !")
-	
    menu()	
              
                  
