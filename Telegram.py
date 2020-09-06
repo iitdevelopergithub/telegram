@@ -74,16 +74,16 @@ def setupForAddData():
    os.system("touch configAddData.data")
    cpass = configparser.RawConfigParser()
    cpass.add_section('cred')
-   xid = input(gr+"[+] enter api ID : "+re)
+   xid = input(gr+"[+] Enter api ID : "+re)
    cpass.set('cred', 'id', xid)
-   xhash = input(gr+"[+] enter hash ID : "+re)
+   xhash = input(gr+"[+] Enter hash ID : "+re)
    cpass.set('cred', 'hash', xhash)
-   xphone = input(gr+"[+] enter phone number : "+re)
+   xphone = input(gr+"[+] Enter phone number : "+re)
    cpass.set('cred', 'phone', xphone)
    setup = open('configAddData.data', 'w')
    cpass.write(setup)
    setup.close()
-   print(gr+"[+] setup complete !")
+   print(gr+"[+] setup complete !") 
    menu()	
              
                  
@@ -298,7 +298,7 @@ def menu():
          scraper()
     elif choice=="D" or choice=="d":
          setupForAddData()
-    elif choice == "E" or choice =="b":
+    elif choice == "E" or choice =="e":
          AddMemberInGroup()
     elif choice == "H" or choice =="c":
          Help() 
