@@ -267,40 +267,41 @@ def AddMemberInGroup():
         print("Unexpected Error")
         continue
 
-
 def menu():
     print("Main Menu Select any one ")
     time.sleep(1)
     print()
     choice = input("""
-    1: Install Application 
-    2: Setup Your Acount for scrapping Data
-    3: Scrape Data From Group
-    4: Setup Acount for Add Data in Group
-    5: Add Member Into Group 
-    6: How to Work this  
-    7: Quit/Log Out
+    A: Install Application 
+    B: Setup Your Acount for scrapping Data
+    C: Scrape Data From Group
+    D: Setup Acount for Add Data in Group
+    E: Add Member Into Group 
+    H: How to Work this  
+    Q: Quit/Log Out
     
     Please enter your choice: """)                  
-    if choice == 1:
+    if choice == "A" or choice =="a":
          installapp () 
-    elif choice == 2:
+    elif choice == "B" or choice =="b":
          setupForScrape()        
-    elif choice ==3:
+    elif choice == "C" or choice =="c":
          scraper()
-    elif choice==4:
+    elif choice=="D" or choice=="d":
          setupForAddData()
-    elif choice == 5:
+    elif choice == "E" or choice =="b":
          AddMemberInGroup()
-    elif choice == 6:
+    elif choice == "H" or choice =="c":
          Help() 
-    elif choice==7:
+    elif choice=="Q" or choice=="q":
          sys.exit
     else:
-        print("You must only select either 1,2,3,4,5,6,7")
+        print("You must only select either A,B,C, or D.")
         print("Please try again")
         menu()
- 
+
+	
+	
 def main():
      menu()   
 main()
