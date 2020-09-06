@@ -18,7 +18,7 @@ cy="\033[1;36m"
 def Name_banner():
    os.system('clear')
    print(f"""
-   (gr+" ******Welcome to IIT DEVELOPER *******")
+   ({gr}" ******Welcome to IIT DEVELOPER *******")
        	{re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
         {re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
         {re}╩ ╩  ╩ {cy}╚═╝ └─┘  ─  ╚═╝ ╚═ ╚═╝ ┴  └─┘┴└─
@@ -188,7 +188,7 @@ def AddMemberInGroup():
  except KeyError:
     os.system('clear')
     Name_banner()
-    print(re+"[!] Goto Menu and first Install Application scrap Data  !!\n")
+    print(re+"[!] Goto Menu and first setup your Accoubt for adding dara  !!\n")
     sys.exit(1)
 
  SLEEP_TIME_1 = 100
