@@ -52,7 +52,7 @@ def installapp():
       
 def setupForScrape():
    setup_banner()
-   os.system("touch config.data")
+   os.system("touch onfigScrap.data")
    cpass = configparser.RawConfigParser()
    cpass.add_section('cred')
    xid = input(gr+"[+] enter api ID : "+re)
@@ -61,20 +61,13 @@ def setupForScrape():
    cpass.set('cred', 'hash', xhash)
    xphone = input(gr+"[+] enter phone number : "+re)
    cpass.set('cred', 'phone', xphone)
-   setup = open('config.data', 'w')
+   setup = open('onfigScrap.data', 'w')
    cpass.write(setup)
    setup.close()
    print(gr+"[+] setup complete !")
 	
    menu()	
-    
-def acceptdata():
-    xid = input(gr+"[+] enter api ID : "+re)
-    cpass.set('cred', 'id', xid)
-    xhash = input(gr+"[+] enter hash ID : "+re)
-    cpass.set('cred', 'hash', xhash)
-    xphone = input(gr+"[+] enter phone number : "+re)
-    cpass.set('cred', 'phone', xphone)   
+      
 	
 def setupForAddData():
     setup_banner()
@@ -95,18 +88,15 @@ def scraper ():
  Name_banner()
  cpass = configparser.RawConfigParser()
  cpass.read('onfigScrap.data')
-
  try:
     api_id = cpass['cred']['id']
     api_hash = cpass['cred']['hash']
     phone = cpass['cred']['phone']
     client = TelegramClient(phone, api_id, api_hash)
  except KeyError:
-    os.system('clear')
     Name_banner
-    print(re+"[!] Go to menu and install application  !!\n")
+    print(re+"[!] Go to menu and install application  !!\n")	
     sys.exit(1)
-
  client.connect()
  if not client.is_user_authorized():
     client.send_code_request(phone)
