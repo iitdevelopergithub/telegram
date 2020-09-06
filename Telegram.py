@@ -187,7 +187,7 @@ def AddMemberInGroup():
  
  except KeyError:
     os.system('clear')
-    banner()
+    Name_banner()
     print(re+"[!] Goto Menu and first Install Application scrap Data  !!\n")
     sys.exit(1)
 
