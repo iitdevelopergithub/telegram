@@ -18,7 +18,7 @@ cy="\033[1;36m"
 def Name_banner():
    os.system('clear')
    print(f"""
-   ({gr}" ******Welcome to IIT DEVELOPER *******")
+    {gr}" Welcome to IIT DEVELOPER 
        	{re}╦ ╦ ╔╦╗{cy}╔═╗ ┌─┐ ┬ ┬ ╔═╗ ║  ╔═╗ ┌─┐┌─┐┬─┐
         {re}║ ║  ║ {cy}║ ║ ├┤  │ │ ├┤  ║  ║ ║ ├─┘├┤ ├┬┘
         {re}╩ ╩  ╩ {cy}╚═╝ └─┘  ─  ╚═╝ ╚═ ╚═╝ ┴  └─┘┴└─
@@ -104,7 +104,7 @@ def scraper ():
  client.connect()
  if not client.is_user_authorized():
     client.send_code_request(phone)
-    os.system('clear')
+   
     Name_banner
     client.sign_in(phone, input(gr+'[+] Enter the code: '+re))
  
