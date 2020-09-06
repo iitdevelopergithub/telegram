@@ -52,7 +52,7 @@ def installapp():
       
 def setupForScrape():
    setup_banner()
-   os.system("touch onfigScrap.data")
+   os.system("touch configScrap.data")
    cpass = configparser.RawConfigParser()
    cpass.add_section('cred')
    xid = input(gr+"[+] enter api ID : "+re)
@@ -61,7 +61,7 @@ def setupForScrape():
    cpass.set('cred', 'hash', xhash)
    xphone = input(gr+"[+] enter phone number : "+re)
    cpass.set('cred', 'phone', xphone)
-   setup = open('onfigScrap.data', 'w')
+   setup = open('configScrap.data', 'w')
    cpass.write(setup)
    setup.close()
    print(gr+"[+] setup complete !")
@@ -80,7 +80,7 @@ def setupForAddData():
    cpass.set('cred', 'hash', xhash)
    xphone = input(gr+"[+] enter phone number : "+re)
    cpass.set('cred', 'phone', xphone)
-   setup = open('onfigScrap.data', 'w')
+   setup = open('configAddData.data', 'w')
    cpass.write(setup)
    setup.close()
    print(gr+"[+] setup complete !")
@@ -91,7 +91,7 @@ def setupForAddData():
 def scraper ():
  Name_banner()
  cpass = configparser.RawConfigParser()
- cpass.read('onfigScrap.data')
+ cpass.read('configScrap.data')
  try:
     api_id = cpass['cred']['id']
     api_hash = cpass['cred']['hash']
@@ -188,7 +188,7 @@ def AddMemberInGroup():
  except KeyError:
     os.system('clear')
     Name_banner()
-    print(re+"[!] Goto Menu and first setup your Accoubt for adding dara  !!\n")
+    print(re+"[!] Goto Menu and first setup your Account for adding dara  !!\n")
     sys.exit(1)
 
  SLEEP_TIME_1 = 100
