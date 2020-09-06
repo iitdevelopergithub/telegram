@@ -266,9 +266,10 @@ def AddMemberInGroup():
         traceback.print_exc()
         print("Unexpected Error")
         continue
+
+def main():
+     menu()   
 main()
-     menu()
-    
  def menu():
     print("Main Menu Select any one ")
     time.sleep(1)
