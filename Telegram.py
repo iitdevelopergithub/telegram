@@ -267,9 +267,7 @@ def AddMemberInGroup():
         print("Unexpected Error")
         continue
 
-def main():
-     menu()   
-main()
+
 def menu():
     print("Main Menu Select any one ")
     time.sleep(1)
@@ -303,7 +301,9 @@ def menu():
         print("Please try again")
         menu()
  
-
+def main():
+     menu()   
+main()
 
 
   
